@@ -1,6 +1,7 @@
 import '../sass/style.scss';
 
 const pic = document.querySelector('.featured-dog img');
+const picBgd = document.querySelector('.featured-dog__background');
 const dogApi = 'https://dog.ceo/api/';
 
 function randomDogs() {
@@ -24,8 +25,8 @@ function allBreeds() {
 // randomDogs()
 // .then(img => pic.setAttribute('src', img))
 
-selecterBreed('akita')
-.then(img => pic.setAttribute('src', img))
-
-allBreeds() 
-    .then(data => console.log(data));
+randomDogs() 
+    .then(img => {
+        pic.setAttribute('src', img);
+        picBgd.style.background = `url("${img}")`;}
+    )
