@@ -1,7 +1,12 @@
 @import "variables";
 
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 .container {
-  width: 70vw;
-  min-width: $max-width;
+  width: 100%;
+  max-width: $max-width;
   margin: 0 auto;
 }
